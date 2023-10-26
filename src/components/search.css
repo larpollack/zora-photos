@@ -7,11 +7,11 @@
 }
 
 .form {
-	@apply w-full relative;
+	@apply w-full relative mx-auto;
 }
 
 .input {
-	@apply w-[90%] mx-8 rounded-full mt-8 pl-10 py-2 bg-gray-200 active:bg-gray-200 focus:bg-gray-200 focus-visible:bg-gray-200 text-black relative;
+	@apply w-[80%] xl:w-[90%] mx-8 rounded-full mt-8 pl-10 py-2 bg-gray-200 active:bg-gray-200 focus:bg-gray-200 focus-visible:bg-gray-200 text-black relative;
 }
 
 .searchGlass {

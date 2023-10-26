@@ -11,12 +11,11 @@ import "./search.css";
 
 const UNSPLASH_ACCESS_KEY = "ukJyK7f_oSD8sRs6GytnZxaxCnv8XCiFi05QKrF_BeQ";
 
-const unsplash = createApi({
-	// accessKey: process.env.REACT_APP_UNSPLASH_KEY as string,
-	accessKey: UNSPLASH_ACCESS_KEY,
-});
-
 const Search: React.FC = () => {
+	const unsplash = createApi({
+		// accessKey: process.env.REACT_APP_UNSPLASH_KEY as string,
+		accessKey: UNSPLASH_ACCESS_KEY,
+	});
 	const searchInput = useRef<HTMLInputElement>(null);
 	const [page, setPage] = useState<number>(1);
 	const [totalPages, setTotalPages] = useState<number>(0);
@@ -86,6 +85,7 @@ const Search: React.FC = () => {
 						className="input"
 						placeholder={`search`}
 						ref={searchInput}
+						onChange={(e) => setQuery(e.target.value)}
 					/>
 					<FontAwesomeIcon className="searchGlass" icon={faMagnifyingGlass} />
 					<button type="submit" className="searchButton">
