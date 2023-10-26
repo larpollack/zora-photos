@@ -4,12 +4,12 @@ import Gallery from "./Gallery";
 import { Photos } from "unsplash-js/dist/methods/search/types/response";
 import { ApiResponse } from "unsplash-js/dist/helpers/response";
 import Pagination from "./Pagination";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 import "./search.css";
 
-const API_URL = "https://api.unsplash.com/search/photos";
 const UNSPLASH_ACCESS_KEY = "ukJyK7f_oSD8sRs6GytnZxaxCnv8XCiFi05QKrF_BeQ";
-const IMAGES_PER_PAGE = 20;
 
 const unsplash = createApi({
 	// accessKey: process.env.REACT_APP_UNSPLASH_KEY as string,
@@ -78,6 +78,7 @@ const Search: React.FC = () => {
 	} else {
 		return (
 			<>
+				<div className="searchLabel">Enter search terms:</div>
 				<form className="form" onSubmit={handleSubmit}>
 					<input
 						type="text"
@@ -86,12 +87,13 @@ const Search: React.FC = () => {
 						placeholder={`search`}
 						ref={searchInput}
 					/>
-
+					<FontAwesomeIcon className="searchGlass" icon={faMagnifyingGlass} />
 					<button type="submit" className="searchButton">
 						Search
 					</button>
 				</form>
 				<div className="filters">
+					Select filters:
 					<div
 						className="blackNWhite"
 						onClick={() => handleColorSelection("black_and_white")}
@@ -141,7 +143,7 @@ const Search: React.FC = () => {
 						&nbsp;&nbsp;
 					</div>
 					<button className="latest" onClick={() => setOrder("latest")}>
-						Latest
+						Latest Images
 					</button>
 				</div>
 				<div className="feed">

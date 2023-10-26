@@ -1,4 +1,5 @@
 import React from "react";
+import "./pagination.css";
 
 type PaginationProps = {
 	page: number;
@@ -13,9 +14,15 @@ const Pagination: React.FC<PaginationProps> = ({
 }) => {
 	return (
 		<div className="pagination">
-			{page > 1 && <button onClick={() => setPage(page - 1)}>Previous</button>}
+			{page > 1 && (
+				<button className="previous" onClick={() => setPage(page - 1)}>
+					Previous
+				</button>
+			)}
 			{page < totalPages && (
-				<button onClick={() => setPage(page + 1)}>Next</button>
+				<button className="next" onClick={() => setPage(page + 1)}>
+					Next
+				</button>
 			)}
 		</div>
 	);
