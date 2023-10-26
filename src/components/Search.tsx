@@ -93,58 +93,32 @@ const Search: React.FC = () => {
 					</button>
 				</form>
 				<div className="filters">
-					Select filters:
-					<div
-						className="blackNWhite"
-						onClick={() => handleColorSelection("black_and_white")}
+					Sort and filter:
+					<select
+						className="selectMenu"
+						onChange={(e) => {
+							if (e.target.value === "latest") {
+								setOrder("latest");
+							} else {
+								setColor(e.target.value as ColorId);
+							}
+							resetSearch();
+						}}
 					>
-						&nbsp;&nbsp;
-					</div>
-					<div className="black" onClick={() => handleColorSelection("black")}>
-						&nbsp;&nbsp;
-					</div>
-					<div className="white" onClick={() => handleColorSelection("white")}>
-						&nbsp;&nbsp;
-					</div>
-					<div
-						className="yellow"
-						onClick={() => handleColorSelection("yellow")}
-					>
-						&nbsp;&nbsp;
-					</div>
-					<div
-						className="orange"
-						onClick={() => handleColorSelection("orange")}
-					>
-						&nbsp;&nbsp;
-					</div>
-					<div className="red" onClick={() => handleColorSelection("red")}>
-						&nbsp;&nbsp;
-					</div>
-					<div
-						className="purple"
-						onClick={() => handleColorSelection("purple")}
-					>
-						&nbsp;&nbsp;
-					</div>
-					<div
-						className="magenta"
-						onClick={() => handleColorSelection("magenta")}
-					>
-						&nbsp;&nbsp;
-					</div>
-					<div className="green" onClick={() => handleColorSelection("green")}>
-						&nbsp;&nbsp;
-					</div>
-					<div className="teal" onClick={() => handleColorSelection("teal")}>
-						&nbsp;&nbsp;
-					</div>
-					<div className="blue" onClick={() => handleColorSelection("blue")}>
-						&nbsp;&nbsp;
-					</div>
-					<button className="latest" onClick={() => setOrder("latest")}>
-						Latest Images
-					</button>
+						<option value="">Select filter</option>
+						<option value="black_and_white">Black and White</option>
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="red">Red</option>
+						<option value="purple">Purple</option>
+						<option value="magenta">Magenta</option>
+						<option value="green">Green</option>
+						<option value="teal">Teal</option>
+						<option value="blue">Blue</option>
+						<option value="latest">Latest Images</option>
+					</select>
 				</div>
 				<div className="feed">
 					{data.response.results.map((pic) => (

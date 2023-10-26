@@ -3,7 +3,7 @@
 }
 
 .searchLabel {
-	@apply text-center mt-4 mb-[-10px];
+	@apply text-center mt-4 mb-[-10px] text-indigo-800;
 }
 
 .form {
@@ -15,51 +15,17 @@
 }
 
 .searchGlass {
-	@apply absolute top-[45px] left-[45px];
+	@apply absolute top-[45px] left-[45px] text-indigo-800;
 }
 
 .searchButton {
-	@apply rounded-xl bg-teal-600 p-2 text-gray-100 ml-[-10px] hover:bg-gray-300 hover:text-teal-700 font-bold;
+	@apply rounded-xl bg-indigo-600 p-2 text-gray-100 ml-[-10px] hover:bg-gray-300 hover:text-indigo-700 font-bold;
 }
 
 .filters {
-	@apply w-[50%] h-auto border border-gray-300 grid grid-cols-5 justify-around items-center justify-items-center content-center text-center mx-auto my-8 p-4 gap-4;
+	@apply w-[50%] h-auto border border-gray-300 flex justify-center items-center justify-items-center content-center text-center mx-auto my-8 p-2 text-indigo-800;
 }
 
-.black {
-	@apply rounded-full bg-black cursor-pointer border border-black px-2 w-[1.5rem] h-[1.5rem];
-}
-.blackNWhite {
-	@apply rounded-full bg-gradient-to-r from-black to-white border border-black cursor-pointer px-2 w-[1.5rem] h-[1.5rem];
-}
-.white {
-	@apply rounded-full bg-white border border-black cursor-pointer px-2 w-[1.5rem] h-[1.5rem];
-}
-.yellow {
-	@apply rounded-full bg-yellow-400 border border-yellow-400 cursor-pointer px-2 w-[1.5rem] h-[1.5rem];
-}
-.orange {
-	@apply rounded-full bg-orange-600 border border-orange-600 cursor-pointer px-2 w-[1.5rem] h-[1.5rem];
-}
-.red {
-	@apply rounded-full bg-red-600 border border-red-600 cursor-pointer px-2 w-[1.5rem] h-[1.5rem];
-}
-.purple {
-	@apply rounded-full bg-violet-700 border border-violet-700 cursor-pointer px-2 w-[1.5rem] h-[1.5rem];
-}
-.magenta {
-	@apply rounded-full bg-fuchsia-600 border border-fuchsia-600 cursor-pointer px-2 w-[1.5rem] h-[1.5rem];
-}
-.green {
-	@apply rounded-full bg-green-500 border border-green-500 cursor-pointer px-2 w-[1.5rem] h-[1.5rem];
-}
-.teal {
-	@apply rounded-full bg-teal-700 border border-teal-700 cursor-pointer px-2 w-[1.5rem] h-[1.5rem];
-}
-.blue {
-	@apply rounded-full bg-blue-600 border border-blue-600 cursor-pointer px-2 w-[1.5rem] h-[1.5rem];
-}
-
-.latest {
-	@apply rounded-full border border-gray-400 px-2 py-1;
+.selectMenu {
+	@apply ml-4;
 }

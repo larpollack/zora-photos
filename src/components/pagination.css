@@ -1,9 +1,9 @@
 .pagination {
-	@apply flex justify-around;
+	@apply flex justify-around mb-2;
 }
 .next {
-	@apply rounded-xl bg-teal-600 p-2 text-gray-100 ml-[-10px] hover:bg-gray-300 hover:text-teal-700 font-bold;
+	@apply rounded-xl bg-indigo-600 p-2 text-gray-100 ml-[-10px] hover:bg-gray-300 hover:text-indigo-700 font-bold;
 }
 .previous {
-	@apply rounded-xl bg-teal-600 p-2 text-gray-100 ml-[-10px] hover:bg-gray-300 hover:text-teal-700 font-bold;
+	@apply rounded-xl bg-indigo-600 p-2 text-gray-100 ml-[-10px] hover:bg-gray-300 hover:text-indigo-700 font-bold;
 }
